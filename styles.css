@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, hsl(180, 20%, 88%) 0%, linen 30%);
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Optima', Helvetica, Garamond, sans-serif;
+    color: #1a1b1c;
+    height: 100vh
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 20px;
+}
+
+#intro {
+    margin-top: 30px;
+}
+
+.wheel {
+    height: 600px;
+    width: 600px;
+    border: 3px solid gray;
+    border-radius: 50%;
+    box-shadow: 0px 2px 1px;
+    background-color: burlywood;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice {
+    height: 25%;
+    width: 25%;
+    border: 1px solid rgb(10,10,10);
+    border-radius: 20%;
+    margin: 76px 50px 0;
+    font-size: 50px;
+    padding: 10px;
+    box-shadow: 1px 3px 5px rgba(10, 10, 10, 0.5);
+}
+
+.choice:last-of-type {
+    margin-top: 0;
+}
+
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.scoreboard h3 {
+    border-bottom: 2px solid white;
+    margin-bottom: 16px;
+    padding-bottom: 2px;
+}
+
+.score p {
+    font-size: 48px;
+}
+
+#instruction {
+    padding: 4px;
+    height: 80%;
+    width: 80%;
+}
+
+#player, #computer {
+    margin-top: -90px;
+    height: 140px;
+    width: 160px;
+    background-color: #111213;
+    color: hsl(355, 90%, 60%);
+    padding: 8px;
+    border-radius: 5%;
+}
+
+button:hover {
+    cursor: pointer;
+}
