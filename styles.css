@@ -5,10 +5,10 @@
 }
 
 body {
-    background: linear-gradient(145deg, hsl(180, 20%, 88%) 0%, linen 30%);
+    background: linear-gradient(145deg, hsl(180, 15%, 88%) 10%, linen 40%);
     font-size: 20px;
     text-align: center;
-    font-family: 'Optima', Helvetica, Garamond, sans-serif;
+    font-family: Arial, sans-serif;
     color: #1a1b1c;
     height: 100vh
 }
@@ -19,12 +19,13 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 0 10px;
-    margin: 0 auto;
+    margin: 0 auto 36px;
     overflow: hidden;
 }
 
 header h1 {
     margin: 20px;
+    font-family: Courier;
 }
 
 #intro {
@@ -38,7 +39,7 @@ header h1 {
     border-radius: 50%;
     box-shadow: 0px 2px 1px;
     background-color: burlywood;
-    margin: 40px auto;
+    margin: 36px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -48,7 +49,7 @@ header h1 {
 .choice {
     height: 25%;
     width: 25%;
-    border: 1px solid rgb(10,10,10);
+    border: 2px solid rgb(10,10,10);
     border-radius: 20%;
     margin: 76px 50px 0;
     font-size: 50px;
@@ -63,9 +64,10 @@ header h1 {
 
 .scoreboard {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    width: 90vw;
+    min-width: 640px;
+    padding-bottom: 4px;
 }
 
 .scoreboard h3 {
@@ -75,25 +77,55 @@ header h1 {
 }
 
 .score p {
-    font-size: 48px;
+    font-size: 52px;
 }
 
 #instruction {
     padding: 4px;
-    height: 80%;
-    width: 80%;
+}
+
+#player {
+    justify-self: flex-start;
+}
+
+#computer {
+    justify-self: flex-end;
 }
 
 #player, #computer {
     margin-top: -90px;
     height: 140px;
-    width: 160px;
+    min-width: 130px;
     background-color: #111213;
     color: hsl(355, 90%, 60%);
     padding: 8px;
     border-radius: 5%;
+    box-shadow: 1px 1px 3px rgba(10, 10, 10, 0.5);
 }
 
 button:hover {
     cursor: pointer;
+}
+
+footer {
+    border-top: 2px solid gray;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 16px;
+    position: static;
+    bottom: 0;
+}
+
+footer i {
+    font-size: 20px;
+}
+
+@media (max-width: 640px) {
+    .wheel {
+        height: 500px;
+        width: 500px;
+    }
+    #player, #computer {
+        margin-top: -50px;
+    }
 }
