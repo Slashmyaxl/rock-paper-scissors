@@ -1,98 +1,55 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const buttons = document.querySelectorAll('.choice');
 
-//5-Round Game
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        playRound(button.id);
+    })
+});
 
-function game() {
+const playerTally = document.querySelector('#player_score');
+const cpuTally = document.querySelector('#computer_score');
+const ticker = document.querySelector('#ticker');
 
-let playerSelection = getPlayerChoice();
-let computerSelection = getComputerChoice();
+function playRound(playerSelection) {
+    
+    if(playerScore === 5 || computerScore === 5) {
+        return;
+    }
 
-//Computer makes random choice
-
-    function getComputerChoice() {
+    function randomChoice() {
         const choices = ['Rock', 'Paper', 'Scissors'];
-        const randomChoice = choices[Math.floor(Math.random() * 3)];
-    
-        return randomChoice;
+        return choices[Math.floor(Math.random() * 3)];
     }
 
-//Get player choice via prompt
+let computerSelection = randomChoice();
 
-    function getPlayerChoice() {
-        const answer = prompt('Choose Rock, Paper, or Scissors:',);
+    if ((playerSelection === 'Rock' && computerSelection === 'Scissors')
+        || (playerSelection === 'Paper' && computerSelection === 'Rock')
+        || (playerSelection === 'Scissors' && computerSelection === 'Paper')) {
     
-        return answer.charAt(0).toUpperCase()
-            + answer.slice(1).toLowerCase();
-    }
-
-//1 round player vs. computer scored
-
-    function playRound(playerSelection, computerSelection) {
-
-        if ((playerSelection === 'Rock' && computerSelection === 'Scissors')
-            || (playerSelection === 'Paper' && computerSelection === 'Rock')
-            || (playerSelection === 'Scissors' && computerSelection === 'Paper')) {
-    
-            playerScore++;
-            return `You win! The score is You: ${playerScore} - Computer: ${computerScore}.`
-        }
-    
-        else if (playerSelection === computerSelection) {
-            
-            return 'It\'s a tie - clash again!'
-        }
-    
-        else {
-            
-            computerScore++;
-            return `You lose. The score is You: ${playerScore} - Computer: ${computerScore}.`
+        ++playerScore;
+        playerTally.textContent = playerScore;
+        if (playerScore < 5) {
+            ticker.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
+        } else if (playerScore === 5) {
+            ticker.textContent = 'Victory! - Well played!';
         }
     }
-
-//Round 1
-
-    console.log(`You chose ${playerSelection}.`);
-    console.log(`Computer chose ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
-
-//Round 2
-
-    computerSelection = getComputerChoice();
-    playerSelection = getPlayerChoice();
-
-    console.log(`You chose ${playerSelection}.`);
-    console.log(`Computer chose ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
-
-//Round 3
-
-    computerSelection = getComputerChoice();
-    playerSelection = getPlayerChoice();
-
-    console.log(`You chose ${playerSelection}.`);
-    console.log(`Computer chose ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
-
-//Round 4
-
-    computerSelection = getComputerChoice();
-    playerSelection = getPlayerChoice();
-
-    console.log(`You chose ${playerSelection}.`);
-    console.log(`Computer chose ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
-
-//Round 5
-
-    computerSelection = getComputerChoice();
-    playerSelection = getPlayerChoice();
-
-    console.log(`You chose ${playerSelection}.`);
-    console.log(`Computer chose ${computerSelection}.`);
-    console.log(playRound(playerSelection, computerSelection));
+    
+    else if (playerSelection === computerSelection) {
+        ticker.textContent = `Draw! You chose ${playerSelection} - Computer chose ${computerSelection}.`  
+    }
+    
+    else {
+        ++computerScore;
+        cpuTally.textContent = computerScore;
+        if (computerScore < 5) {
+            ticker.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
+        } else if (computerScore === 5) {
+            ticker.textContent = 'Defeat! - Maybe next time...';
+        }
+    }
 }
-
-game()
-console.log(`Final Score is You: ${playerScore} - Computer: ${computerScore}.`)
