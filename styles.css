@@ -115,6 +115,9 @@ header h1 {
 
 button:hover {
     cursor: pointer;
+    -webkit-transform: translateX(1px) translateY(1px);
+    transform: translateX(1px) translateY(1px);
+    box-shadow: unset;
 }
 
 footer {
