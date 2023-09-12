@@ -123,7 +123,7 @@ button:hover {
 
 footer {
     border-top: 2px solid gray;
-    width: 100%;
+    width: 100vw;
     padding: 8px 0;
     font-size: 15px;
     height: 42px;
