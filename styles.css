@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-family: Courier, 'Courier New', monospace, sans-serif;
     color: #1a1b1c;
     height: 100vh;
 }
@@ -72,7 +72,7 @@ header h1 {
 .scoreboard {
     display: flex;
     justify-content: space-between;
-    font-family: 'Roboto', 'Courier New', Courier, monospace;
+    font-family: 'Roboto', Courier, 'Courier New', monospace;
     min-width: 480px;
     padding-bottom: 8px;
     margin-bottom: 24px;
