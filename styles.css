@@ -23,6 +23,7 @@ body {
     align-items: center;
     margin: 0 auto;
     min-height: 100vh;
+    height: 100%;
 }
 
 header h1 {
@@ -124,6 +125,7 @@ button:hover {
 
 footer {
     border-top: 2px solid gray;
+    min-width: 100vw;
     width: 100%;
     padding: 8px 0;
     font-size: 15px;
