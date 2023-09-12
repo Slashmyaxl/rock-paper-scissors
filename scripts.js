@@ -11,11 +11,14 @@ buttons.forEach((button) => {
 
 const playerTally = document.querySelector('#player_score');
 const cpuTally = document.querySelector('#computer_score');
-const ticker = document.querySelector('#ticker');
+const commentary = document.querySelector('#instruction');
+const tickerContainer = document.querySelector('#ticker-container');
+const ticker = document.createElement('p');
+    tickerContainer.appendChild(ticker);
 
 function playRound(playerSelection) {
-    
-    if(playerScore === 5 || computerScore === 5) {
+
+    if (playerScore === 5 || computerScore ===5) {
         return;
     }
 
@@ -30,26 +33,38 @@ let computerSelection = randomChoice();
         || (playerSelection === 'Paper' && computerSelection === 'Rock')
         || (playerSelection === 'Scissors' && computerSelection === 'Paper')) {
     
-        ++playerScore;
+        playerScore++;
         playerTally.textContent = playerScore;
         if (playerScore < 5) {
-            ticker.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
+            commentary.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
+        } 
+        
+        if (playerScore === 4) {
+            ticker.style.color = 'hsl(150, 95%, 55%)';
+            ticker.textContent = 'Almost...'
         } else if (playerScore === 5) {
-            ticker.textContent = 'Victory! - Well played!';
+            ticker.style.color = 'hsl(150, 95%, 55%)';
+            ticker.textContent = 'VICTORY!';
         }
     }
     
     else if (playerSelection === computerSelection) {
-        ticker.textContent = `Draw! You chose ${playerSelection} - Computer chose ${computerSelection}.`  
+        commentary.textContent = `Draw! You chose ${playerSelection} - Computer chose ${computerSelection}.`  
     }
     
     else {
-        ++computerScore;
+        computerScore++;
         cpuTally.textContent = computerScore;
         if (computerScore < 5) {
-            ticker.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
+            commentary.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
+        }
+        
+        if (computerScore === 4) {
+            ticker.style.color = 'hsl(70, 90%, 60%)';
+            ticker.textContent = 'Don\'t give up...'
         } else if (computerScore === 5) {
-            ticker.textContent = 'Defeat! - Maybe next time...';
+            ticker.style.color = 'hsl(355, 90%, 60%)'
+            ticker.textContent = 'DEFEAT!';
         }
     }
 }
