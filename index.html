@@ -9,41 +9,38 @@
     <script src="./scripts.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <p id="intro">Welcome! In this version of a well-known classic, you'll take on the most unpredictable opponent of all - your computer!</p>
+    </header>
     <div class="container">
-        <header>
-            <h1>Rock, Paper, Scissors</h1>
-            <p id="intro">Welcome! In this version of a well-known classic, you'll take on the most unpredictable opponent of all - your computer!</p>
-        </header>
-        <main>
-            <div class="wheel">
-                <button class="choice" id="Rock">
-                    <i class="fa-regular fa-hand-back-fist fa-2xl"></i>
-                </button>
-                <button class="choice" id="Paper">
-                    <i class="fa-regular fa-hand fa-2xl"></i>
-                </button>
-                <p id="instruction">Click a selection to begin. First to 5 points wins! Choose wisely...</p>
-                <button class="choice" id="Scissors">
-                    <i class="fa-regular fa-hand-scissors fa-2xl"></i>
-                </button>
+        <div class="wheel">
+            <button class="choice" id="Rock">
+                <i class="fa-regular fa-hand-back-fist fa-2xl"></i>
+            </button>
+            <button class="choice" id="Paper">
+                <i class="fa-regular fa-hand fa-2xl"></i>
+            </button>
+            <p id="instruction">Click a selection to begin. First to 5 points wins! Choose wisely...</p>
+            <button class="choice" id="Scissors">
+                <i class="fa-regular fa-hand-scissors fa-2xl"></i>
+            </button>
+        </div>
+        <div class="scoreboard">
+            <div class="score" id="player">
+                <h3>You</h3>
+                <p id="player_score">0</p>
             </div>
-            <div class="scoreboard">
-                <div class="score" id="player">
-                    <h3>You</h3>
-                    <p id="player_score">0</p>
-                </div>
-                <div id="ticker-container">
-                </div>
-                <div class="score" id="computer">
-                    <h3>CPU</h3>
-                    <p id="computer_score">0</p>
-                </div>
+            <div id="ticker-container">
             </div>
-        </main>
+            <div class="score" id="computer">
+                <h3>CPU</h3>
+                <p id="computer_score">0</p>
+            </div>
+        </div>
     </div>
     <footer>
-            <p>Designed by Darrell Larabee <span><a href="https://github.com/Slashmyaxl" target="_blank"><i class="fa-brands fa-github"></i></a></span></p>
-        </footer>
-    
+        <p>Designed by Darrell Larabee <span><a href="https://github.com/Slashmyaxl" target="_blank"><i class="fa-brands fa-github"></i></a></span></p>
+    </footer>
 </body>
 </html>
