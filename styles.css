@@ -5,32 +5,36 @@
 }
 
 body {
-    background: linear-gradient(145deg, linen 55%, hsl(180, 12%, 88%) 70%);
+    background: linen;
     font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     text-align: center;
     font-family: monospace, sans-serif;
     font-weight: 400;
+    min-width: 580px;
+    gap: 12px;
+    height: 100vh;
     color: #1a1b1c;
-    height: 100%;
+}
+
+header {
+    margin: 20px 10px 0;
+}
+
+#intro {
+    margin-top: 24px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 0 10px;
-}
-
-header h1 {
-    margin: 20px;
-}
-
-#intro {
-    margin-top: 24px;
+    padding: 0px 8px;
 }
 
 .wheel {
@@ -39,7 +43,7 @@ header h1 {
     border: 3px solid gray;
     border-radius: 50%;
     box-shadow: 1px 2px 1px;
-    background-color: burlywood;
+    background: linear-gradient(155deg, burlywood 70%, hsl(345, 2%, 55%) 88%);
     margin: 36px auto 64px;
     display: flex;
     flex-wrap: wrap;
@@ -68,7 +72,6 @@ header h1 {
     margin-bottom: 20px;
     margin-top: 0
 }
-
 
 .scoreboard {
     display: flex;
@@ -123,14 +126,10 @@ button:hover {
 
 footer {
     border-top: 2px solid gray;
-    width: 100%;
     padding: 8px 0;
     font-size: 15px;
     height: 42px;
-}
-
-footer i {
-    font-size: 20px;
+    width: 100%;
 }
 
 footer i {
