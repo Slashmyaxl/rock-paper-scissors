@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     text-align: center;
     font-family: monospace, sans-serif;
-    font-weight: 550;
+    font-weight: 400;
     color: #1a1b1c;
     height: 100vh;
 }
@@ -91,12 +91,12 @@ header h1 {
 }
 
 #ticker-container {
-    padding: 18px 4px;
+    padding: 15px 4px;
     color: white;
     font-size: 32px;
     background-color: #111213;
     margin: 0 14px;
-    width: 316px;
+    width: 324px;
     height: 70px;
     border-radius: 3%;
     vertical-align: middle;
