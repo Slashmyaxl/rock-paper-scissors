@@ -36,7 +36,7 @@ let computerSelection = randomChoice();
         playerScore++;
         playerTally.textContent = playerScore;
         if (playerScore < 5) {
-            commentary.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
+            commentary.textContent = `Round won! You chose ${playerSelection} - Computer chose ${computerSelection}.`
         } 
         
         if (playerScore === 4) {
