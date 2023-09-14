@@ -5,7 +5,8 @@
 }
 
 body {
-    background: linen;
+    /* background: linen; */
+    background: linear-gradient(160deg, hsl(180, 55%, 95%), linen 50%);
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -37,13 +38,13 @@ header {
 }
 
 .wheel {
-    height: 500px;
-    width: 500px;
+    height: 470px;
+    width: 470px;
     border: 3px solid gray;
     border-radius: 50%;
     box-shadow: 1px 2px 1px;
     background: linear-gradient(155deg, burlywood 70%, hsl(345, 2%, 55%) 88%);
-    margin: 24px auto 64px;
+    margin: 24px auto 44px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -53,10 +54,11 @@ header {
 .choice {
     height: 24%;
     width: 24%;
+    text-align: center;
     border: 2px solid rgb(10,10,10);
     border-radius: 20%;
     margin: 80px 50px 0;
-    font-size: 48px;
+    font-size: 44px;
     padding: 10px;
     box-shadow: 1px 3px 5px rgba(10, 10, 10, 0.5);
 }
@@ -78,7 +80,7 @@ header {
     font-family: 'Roboto', monospace;
     width: 580px;
     padding-bottom: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .scoreboard h3 {
@@ -135,7 +137,16 @@ footer i {
     font-size: 20px;
 }
 
-@media (max-width: 611px) {
+@media (max-width: 631px) {
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    #intro {
+        font-size: 18px;
+    }
+
     .scoreboard {
         width: 464px;
     }
@@ -150,15 +161,11 @@ footer i {
         height: 400px;
         width: 400px;
         font-size: 18px;
-        margin-top: 12px;
+        margin: 12px auto 58px;
     }
 
     .choice {
         margin: 56px 28px 0;
-        font-size: 36px;
-    }
-
-    header h1 {
         font-size: 36px;
     }
 }
