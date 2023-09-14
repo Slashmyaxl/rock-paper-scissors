@@ -16,13 +16,14 @@ body {
     font-family: monospace, sans-serif;
     font-weight: 400;
     gap: 12px;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
     color: #1a1b1c;
 }
 
 header {
-    margin: 20px 8px 0;
+    margin: 20px auto 0;
 }
 
 #intro {
@@ -37,6 +38,7 @@ header {
     align-items: center;
     margin: 0 auto;
     padding: 0px 8px;
+    max-width: 100%;
 }
 
 .wheel {
