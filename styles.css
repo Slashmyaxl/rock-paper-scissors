@@ -36,7 +36,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 0px 8px;
+    padding: 0px 4px;
     max-width: 100%;
 }
 
@@ -80,9 +80,9 @@ header {
 .scoreboard {
     display: flex;
     justify-content: space-between;
+    gap: 8px;
     font-family: 'Roboto', monospace;
-    width: 560px;
-    padding-bottom: 8px;
+    width: 528px;
     margin-bottom: 18px;
 }
 
@@ -102,7 +102,6 @@ header {
     color: white;
     font-size: 32px;
     background-color: #111213;
-    margin: 0 14px;
     height: 70px;
     width: 50%;
     flex: auto;
@@ -132,7 +131,7 @@ button:hover {
 footer {
     border-top: 2px solid gray;
     padding: 8px 0;
-    font-size: 15px;
+    font-size: 16px;
     height: 42px;
     width: 100%;
 }
@@ -152,13 +151,12 @@ footer i {
     }
 
     .scoreboard {
-        width: 404px;
+        width: 400px;
     }
 
     #ticker-container {
         font-size: 24px;
         padding-top: 20px;
-        margin: 0 4px;
     }
 
     .wheel {
