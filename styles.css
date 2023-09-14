@@ -173,3 +173,36 @@ footer i {
         font-size: 36px;
     }
 }
+
+@media (max-width: 481px) {
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    #intro {
+        font-size: 18px;
+    }
+
+    .scoreboard {
+        width: 464px;
+    }
+
+    #ticker-container {
+        font-size: 24px;
+        padding-top: 20px;
+        margin: 0 10px;
+    }
+
+    .wheel {
+        height: 400px;
+        width: 400px;
+        font-size: 18px;
+        margin: 12px auto 58px;
+    }
+
+    .choice {
+        margin: 56px 28px 0;
+        font-size: 36px;
+    }
+}
