@@ -18,7 +18,7 @@ const ticker = document.createElement('p');
 
 function playRound(playerSelection) {
 
-    if (playerScore === 5 || computerScore ===5) {
+    if (playerScore === 5 || computerScore === 5) {
         return;
     }
 
@@ -35,9 +35,8 @@ let computerSelection = randomChoice();
     
         playerScore++;
         playerTally.textContent = playerScore;
-        if (playerScore < 5) {
-            commentary.textContent = `Round won! You chose ${playerSelection} - Computer chose ${computerSelection}.`
-        } 
+        commentary.textContent = `Round won! You chose ${playerSelection} - Computer chose ${computerSelection}.`;
+         
         
         if (playerScore === 4) {
             ticker.style.color = 'hsl(150, 95%, 55%)';
@@ -55,9 +54,7 @@ let computerSelection = randomChoice();
     else {
         computerScore++;
         cpuTally.textContent = computerScore;
-        if (computerScore < 5) {
-            commentary.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`
-        }
+        commentary.textContent = `Point, computer! You chose ${playerSelection} - Computer chose ${computerSelection}.`;
         
         if (computerScore === 4) {
             ticker.style.color = 'hsl(70, 90%, 60%)';
