@@ -14,14 +14,13 @@ body {
     text-align: center;
     font-family: monospace, sans-serif;
     font-weight: 400;
-    min-width: 580px;
     gap: 12px;
     height: 100vh;
     color: #1a1b1c;
 }
 
 header {
-    margin: 20px 10px 0;
+    margin: 20px 8px 0;
 }
 
 #intro {
@@ -44,7 +43,7 @@ header {
     border-radius: 50%;
     box-shadow: 1px 2px 1px;
     background: linear-gradient(155deg, burlywood 70%, hsl(345, 2%, 55%) 88%);
-    margin: 36px auto 64px;
+    margin: 24px auto 64px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -52,12 +51,12 @@ header {
 }
 
 .choice {
-    height: 25%;
-    width: 25%;
+    height: 24%;
+    width: 24%;
     border: 2px solid rgb(10,10,10);
     border-radius: 20%;
     margin: 80px 50px 0;
-    font-size: 50px;
+    font-size: 48px;
     padding: 10px;
     box-shadow: 1px 3px 5px rgba(10, 10, 10, 0.5);
 }
@@ -77,7 +76,7 @@ header {
     display: flex;
     justify-content: space-between;
     font-family: 'Roboto', monospace;
-    min-width: 480px;
+    width: 580px;
     padding-bottom: 8px;
     margin-bottom: 24px;
 }
@@ -134,4 +133,32 @@ footer {
 
 footer i {
     font-size: 20px;
+}
+
+@media (max-width: 611px) {
+    .scoreboard {
+        width: 464px;
+    }
+
+    #ticker-container {
+        font-size: 24px;
+        padding-top: 20px;
+        margin: 0 10px;
+    }
+
+    .wheel {
+        height: 400px;
+        width: 400px;
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    .choice {
+        margin: 56px 28px 0;
+        font-size: 36px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
 }
