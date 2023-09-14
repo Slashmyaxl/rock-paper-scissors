@@ -17,6 +17,7 @@ body {
     font-weight: 400;
     gap: 12px;
     height: 100vh;
+    width: 100vw;
     color: #1a1b1c;
 }
 
@@ -26,6 +27,7 @@ header {
 
 #intro {
     margin-top: 24px;
+    max-width: 664px;
 }
 
 .container {
